@@ -2,8 +2,8 @@ const fs = require('fs')
 const path = require('path')
 
 const manifest = {
-  name: 'NextApp',
-  short_name: 'NextApp',
+  name: 'NextPWA',
+  short_name: 'NextPWA',
   lang: 'en-US',
   start_url: '/',
   display: 'standalone',

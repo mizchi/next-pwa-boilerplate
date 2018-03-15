@@ -14,8 +14,8 @@ export default class MyDocument extends Document {
           <meta name="theme-color" content="#317EFB" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
-          <meta name="application-name" content="NextApp" />
-          <meta name="apple-mobile-web-app-title" content="NextApp" />
+          <meta name="application-name" content="NextPWA" />
+          <meta name="apple-mobile-web-app-title" content="NextPWA" />
           <meta name="msapplication-starturl" content="/" />
           <meta
             name="viewport"

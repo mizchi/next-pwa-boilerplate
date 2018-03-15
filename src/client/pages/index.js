@@ -5,8 +5,8 @@ import DefaultLayout from '../components/organisms/DefaultLayout'
 export default () => {
   return (
     <DefaultLayout
-      title="NextApp - Index"
-      description="This is top page of NextApp"
+      title="NextPWA - Index"
+      description="This is top page of NextPWA"
     >
       <h1>Index</h1>
     </DefaultLayout>
