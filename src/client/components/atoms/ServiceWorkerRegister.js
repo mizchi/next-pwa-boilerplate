@@ -3,9 +3,9 @@ import React from 'react'
 
 let _doneOnce = false
 
-export default class extends React.PureComponent {
+export default class extends React.PureComponent<{}> {
   componentDidMount() {
-    if ('serviceWorker' in navigator) {
+    if ('serviceWorker' in navigator && navigator.serviceWorker) {
       if (_doneOnce) {
         return
       }
