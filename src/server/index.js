@@ -2,11 +2,12 @@
 const express = require('express')
 const next = require('next')
 const { parse } = require('url')
+const path = require('path')
 const dev = process.env.NODE_ENV !== 'production'
 const PORT = process.env.PORT || 3000
-const app = next({ dir: '.', dev })
+const app = next({ dir: path.join(__dirname, '../client'), dev })
 const handle = app.getRequestHandler()
-const routes = require('./routes')
+const routes = require('../routes')
 
 app.prepare().then(() => {
   const server = express()

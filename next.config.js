@@ -1,15 +1,10 @@
-const routes = require('./routes')
+const routes = require('./src/routes')
 
 module.exports = {
   async exportPathMap() {
     return routes
   },
-  webpack(config, options) {
-    if (!options.defaultLoaders) {
-      throw new Error(
-        'This plugin is not compatible with Next.js versions below 5.0.0 https://err.sh/next-plugins/upgrade'
-      )
-    }
+  webpack(config, _options) {
     return config
   }
 }

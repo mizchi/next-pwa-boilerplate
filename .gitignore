@@ -1,5 +1,5 @@
 .next
 node_modules
-out/*
-!out/_redirects
+src/client/out/*
+!src/client/out/_redirects
 .netlify

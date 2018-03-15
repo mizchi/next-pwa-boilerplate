@@ -4,12 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "@zeit/next-preact": "^0.0.5",
     "isomorphic-unfetch": "^2.0.0",
-    "module-alias": "^2.0.6",
     "next": "^5.0.0",
-    "preact": "^8.2.7",
-    "preact-compat": "^3.18.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },
@@ -19,9 +15,9 @@
     "serve": "^6.5.2"
   },
   "scripts": {
-    "dev": "node .",
-    "watch": "serve out",
-    "build:static": "yarn next build && yarn next export",
-    "deploy": "yarn build:static && netlify deploy -p out"
+    "dev": "node src/server",
+    "build:static": "next build src/client && next export src/client",
+    "server:static-local": "npm run build:static && serve src/client/out",
+    "deploy:static": "npm run build:static && netlify deploy -p src/client/out"
   }
 }
