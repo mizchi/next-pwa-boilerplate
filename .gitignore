@@ -1,3 +1,5 @@
 .next
-out
 node_modules
+out/*
+!out/_redirects
+.netlify

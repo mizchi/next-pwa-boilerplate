@@ -6,6 +6,7 @@
   "dependencies": {
     "@zeit/next-preact": "^0.0.5",
     "isomorphic-unfetch": "^2.0.0",
+    "module-alias": "^2.0.6",
     "next": "^5.0.0",
     "preact": "^8.2.7",
     "preact-compat": "^3.18.0",
@@ -13,14 +14,14 @@
     "react-dom": "^16.2.0"
   },
   "devDependencies": {
+    "express": "^4.16.3",
+    "netlify-cli": "^1.2.2",
     "serve": "^6.5.2"
   },
   "scripts": {
     "dev": "node .",
-    "build": "next build",
-    "pre:export": "npm run build",
-    "pre:start": "npm run export",
-    "export": "next export",
-    "start": "serve out"
+    "watch": "serve out",
+    "build:static": "yarn next build && yarn next export",
+    "deploy": "yarn build:static && netlify deploy -p out"
   }
 }
