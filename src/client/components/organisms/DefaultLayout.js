@@ -12,7 +12,7 @@ export default (props: {
   return (
     <React.Fragment>
       <Head>
-        <title>{props.title || 'next app'}</title>
+        <title>{props.title || 'Next PWA'}</title>
         {props.description && (
           <meta name="description" content={props.description} />
         )}
