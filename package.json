@@ -19,9 +19,10 @@
   "scripts": {
     "server:dev": "node src/server",
     "server:prod": "node src/server",
-    "build:sw": "workbox generateSW workbox-config.js",
+    "build:static:manifest": "node script/build-manifest.js",
+    "build:static:sw": "workbox generateSW workbox-config.js",
     "build:static":
-      "next build src/client && next export src/client && npm run build:sw",
+      "next build src/client && next export src/client && npm run build:static:sw && npm run build:static:manifest",
     "server:static-local": "npm run build:static && serve src/client/out",
     "deploy:static": "npm run build:static && netlify deploy -p src/client/out"
   }

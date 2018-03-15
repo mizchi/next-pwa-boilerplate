@@ -8,11 +8,18 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <html>
+      <html lang="en-US">
         <Head>
+          <link rel="manifest" href="manifest.json" />
+          <meta name="theme-color" content="#317EFB" />
+          <meta name="mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="application-name" content="NextApp" />
+          <meta name="apple-mobile-web-app-title" content="NextApp" />
+          <meta name="msapplication-starturl" content="/" />
           <meta
             name="viewport"
-            content="initial-scale=1.0, width=device-width"
+            content="width=device-width, initial-scale=1, shrink-to-fit=no"
           />
         </Head>
         <body>
