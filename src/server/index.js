@@ -1,4 +1,3 @@
-// server
 const express = require('express')
 const next = require('next')
 const { parse } = require('url')

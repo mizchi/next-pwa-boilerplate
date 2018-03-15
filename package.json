@@ -11,11 +11,13 @@
   },
   "devDependencies": {
     "express": "^4.16.3",
+    "flow-bin": "^0.67.1",
     "netlify-cli": "^1.2.2",
     "serve": "^6.5.2"
   },
   "scripts": {
-    "dev": "node src/server",
+    "server:dev": "node src/server",
+    "server:prod": "node src/server",
     "build:static": "next build src/client && next export src/client",
     "server:static-local": "npm run build:static && serve src/client/out",
     "deploy:static": "npm run build:static && netlify deploy -p src/client/out"
