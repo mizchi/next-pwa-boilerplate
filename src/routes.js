@@ -1,4 +1,5 @@
 module.exports = {
   '/': { page: '/' },
-  '/about': { page: '/about' }
+  '/about': { page: '/about' },
+  '/async': { page: '/async' }
 }
