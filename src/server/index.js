@@ -13,6 +13,15 @@ app.prepare().then(() => {
   server.get('*', (req, res) => {
     const parsedUrl = parse(req.url, true)
     const { pathname, query = {} } = parsedUrl
+
+    // return service worker
+    if (pathname === '/service-worker.js') {
+      const filePath = join(__dirname, 'src/client/.next', pathname)
+      app.serveStatic(req, res, filePath)
+      return
+    }
+
+    // return routed pages
     const route = routes[pathname]
     if (route) {
       return app.render(req, res, route.page, route.query)

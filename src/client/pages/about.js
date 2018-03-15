@@ -4,7 +4,7 @@ import DefaultLayout from '../components/organisms/DefaultLayout'
 
 export default () => {
   return (
-    <DefaultLayout>
+    <DefaultLayout title="NextApp - About">
       <h1>About</h1>
     </DefaultLayout>
   )
