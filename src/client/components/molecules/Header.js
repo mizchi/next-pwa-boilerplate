@@ -17,6 +17,10 @@ export default function Header() {
         <Link prefetch href="/async">
           <a>Async</a>
         </Link>
+        |
+        <Link prefetch href="/hn">
+          <a>HN</a>
+        </Link>
       </nav>
     </header>
   )
